@@ -5,18 +5,21 @@
 
 ### Introduction
 Linear quadratic Gaussian (LQG) control is a well-established method for optimal control through state estimation, particularly in stabilizing an inverted pendulum on a cart. In standard laboratory setups, sensor redundancy enables direct measurement of configuration variables using displacement sensors and rotary encoders. However, in outdoor environments, dynamically stable mobile platforms—such as Segways, hoverboards, and bipedal robots—often have limited sensor availability, restricting state estimation primarily to attitude stabilization. Since the tilt angle cannot be directly measured, it is typically estimated through sensor fusion, increasing reliance on inertial sensors and necessitating a lightweight, self-contained perception module. 
-&nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; 
- <img src="https://github.com/Daniboy370/Inertial_LQG/blob/main/data/Vid_Pend_1.gif?raw=true" width="950" class='center'/>
 
-Prior research has not incorporated accelerometer data into the LQG framework for stabilizing pendulum-like systems, as jerk states are not explicitly modeled in the Newton-Euler formalism. In this paper, we address this gap by leveraging local differential flatness to incorporate higher-order dynamics into the system model, resulting in:
+Despite its effectiveness, prior research has not incorporated accelerometer data into the LQG framework for stabilizing pendulum-like systems, as jerk states are not explicitly modeled in the Newton-Euler formalism. This paper addresses this limitation by leveraging local differential flatness to incorporate linear and angular jerk states into the system model:
 
 &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; 
  <img src="https://github.com/Daniboy370/Inertial_LQG/blob/main/data/Fig_Augmented_0.png?raw=true" width="1000" class='center'/>
 
-. This refinement enhances state estimation, enabling a more robust LQG controller that predicts accelerations for dynamically stable mobile platforms.
+The resulting higher-order system dynamics enhance state estimation, leading to a more robust LQG controller capable of predicting accelerations for dynamically stable mobile platforms : 
 
 &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; 
  <img src="https://github.com/Daniboy370/Inertial_LQG/blob/main/data/Fig_Augmented_1.png?raw=true" width="1000" class='center'/>
+
+This refinement improves overall control performance, as demonstrated in the following simulation:
+
+&nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; 
+ <img src="https://github.com/Daniboy370/Inertial_LQG/blob/main/data/Vid_Pend_1.gif?raw=true" width="950" class='center'/>
 
 Next, the stabilization process of the baseline signal can be illustrated, accompanied by the running version of a one standard deviation, i.e. $\pm \sigma (n)$. The top subfigure presents the short-term time scale, while the bottom one shows the asymptotic convergence resulting from the long-lasting averaging attributes. This demonstrates how the inclusion of additional collected samples effectively cancels out the noise effects.
 
