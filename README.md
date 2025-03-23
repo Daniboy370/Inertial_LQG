@@ -30,10 +30,10 @@ To evaluate our hypothesized higher-order system model, we conduct a comprehensi
  &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; 
  <img src="https://github.com/Daniboy370/Inertial_LQG/blob/main/data/Fig_Comp_1.png?raw=true" width="1150" class='center'/>
 
-We analyze the impact of update ratios on observer-controller (KF-LQR) sensitivity. At \(\rho = 0.5\) (top row), small, bounded errors appear, with the rightmost column showing the corresponding control action. This performance stems from the predictive model compensating for uncertainty. At \(\rho = 0.1\) (middle row), greater update discontinuity thickens and adds noise to error patterns, increasing control fluctuations as it struggles to stabilize configuration variables. The response remains stable but less smooth, requiring more control effort. At \(\rho = 0.01\) (bottom row), the controller switches abruptly between saturation boundaries, indicating instability. State estimates diverge, causing drift and insufficient control feedback, ultimately leading to unrecoverable perturbations.
+We analyze the impact of update ratios on observer-controller (KF-LQR) sensitivity. At $\rho = 0.5$ (top row), small, bounded errors appear, with the rightmost column showing the corresponding control action. This performance stems from the predictive model compensating for uncertainty. At $\rho = 0.1$ (middle row), greater update discontinuity thickens and adds noise to error patterns, increasing control fluctuations as it struggles to stabilize configuration variables. The response remains stable but less smooth, requiring more control effort. At $\rho = 0.01$ (bottom row), the controller switches abruptly between saturation boundaries, indicating instability. State estimates diverge, causing drift and insufficient control feedback, ultimately leading to unrecoverable perturbations.
 
  &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; 
- <img src="https://github.com/Daniboy370/Inertial_LQG/blob/main/data/Fig_Ratio.png?raw=true" width="800" class='center'/>
+ <img src="https://github.com/Daniboy370/Inertial_LQG/blob/main/data/Fig_Ratio.png?raw=true" width="700" class='center'/>
 
 ## Code
 
