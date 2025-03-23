@@ -30,7 +30,7 @@ This refinement improves overall control performance, as demonstrated in the fol
 To evaluate our hypothesized higher-order system model, we conduct a comprehensive assessment. First, the left figure verifies state solutions under ideal conditions, with a continuous prediction-to-update ratio ($\rho=1$). Then, the right figure examines the same configuration variables and their derivatives under lower ratios ($\rho<1$), where external updates are scarcer and more discontinuous:
 
  &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; 
- <img src="https://github.com/ansfl/Learning-Based-MEMS-Gyrocompassing/blob/main/figures/Fig_Comp_1.png?raw=true" width="500" class='center'/>
+ <img src="https://github.com/Daniboy370/Inertial_LQG/blob/main/data/Fig_Comp_1.png?raw=true" width="800" class='center'/>
 
 
 
