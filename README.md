@@ -45,11 +45,9 @@ Next, we conduct an empirical sensitivity analysis, presenting four response sur
  &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; 
  <img src="https://github.com/Daniboy370/Inertial_LQG/blob/main/data/Fig_Comp_3.png?raw=true" width="1000" class='center'/>
 
-Compared to Fig.~\ref{fig:stab_2}, both models exhibit similar patterns with subtle differences. However, two key aspects highlight significant contrasts.  
+Compared to Fig.~\ref{fig:stab_2}, both models exhibit similar patterns with subtle differences. However, two key aspects reveal significant contrasts.  
 
-First, the A-IPoC model consistently maintains a larger stability region ${S}_{{A-IPoC} > {S}_{IPoC}$. Second, the level sets expand differently, with the IPoC model exhibiting a higher divergence level. This suggests that A-IPoC provides greater marginal stability, moderating divergence for the same initial perturbation.  
-
-Table~\ref{t:err_3} quantifies these findings using normalization techniques. The first column presents ${S}_j$ as a fraction of the IPoC basin area, while the second normalizes it by the total permissible perturbation range, $ \boldsymbol{\Gamma}_0 $, highlighting relative robustness. The rightmost column records stability losses for both configuration variables. Results indicate that A-IPoC outperforms IPoC, with stability areas 27\%-39\% larger and crash rates 10\%-15\% lower, offering superior disturbance immunity and control resilience.
+First, the A-IPoC model consistently maintains a larger stability region ${S}_{A-IPoC} > {S}_{IPoC}$. Second, the level sets expand differently, with the IPoC model exhibiting a higher divergence level. These differences suggest that A-IPoC offers greater marginal stability by moderating divergence for the same initial perturbation. Quantitatively, A-IPoC outperforms IPoC, with stability areas 27\%-39\% larger and crash rates 10\%-15\% lower, demonstrating superior disturbance immunity and control resilience.
  
 ## Code
 
