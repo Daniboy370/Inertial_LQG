@@ -79,9 +79,13 @@ File | Purpose | File | Purpose
 **IPoC_Linearize** | Regular linearization process | **A_IPoC_Linearize** | Augmented linearization process
 **IPoC_Solve** | Numerical solution (using RK-45) | **A_IPoC_Solve** | Numerical solution (using RK-45)
 
+**Convergence_main**: A comparative analysis of spatial trajectories between the two competing models.
+
+**Stability_main**: A comparative sensitivity analysis of both models at various prediction-update ratios.
+
 ## Citation
 
-The authors would appreciate the users stars (on this repo) and citation of our article as well via:
+The authors would appreciate users giving stars to this repository and citing our article as follows:
 ```
 @article{engelsman2025InertialBasedLQG,
   title={Inertial-Based LQG Control: A New Look at Inverted Pendulum Stabilization},
