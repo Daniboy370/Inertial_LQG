@@ -39,7 +39,16 @@ In conclusion, this study we present a practical deep learning framework to effe
 
 ### Experimental setup & Dataset
 
-To ensure robust generalizability, acquiring data of both quantity and quality is crucial. The figure below illustrates our experimental setup conducted under controlled laboratory conditions, free from external disturbances. The five main components are highlighted in blue parentheses:
+To evaluate our hypothesized higher-order system model, we first verify its reliability across ideal baseline, with continuous prediction-to-update ratio (left figure). Then, we slowly examine the same configuration variables, under lower ratios ($\rho<1$), characterized with discontinuous external updates.
+
+ &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; 
+ <img src="https://github.com/ansfl/Learning-Based-MEMS-Gyrocompassing/blob/main/figures/Fig_Comp_1.png?raw=true" width="500" class='center'/>
+
+
+
+
+
+ensure robust generalizability, acquiring data of both quantity and quality is crucial. The figure below illustrates our experimental setup conducted under controlled laboratory conditions, free from external disturbances. The five main components are highlighted in blue parentheses:
 
 1) Control module [MRU-P datasheet](https://www.inertiallabs.com/mru-datasheet): Ensures level conditions and
    provides GT heading angles ($y$) with a static accuracy of $0.2^\circ$.
