@@ -58,19 +58,27 @@ For convenience, both inference and training notebooks are provided, GPU-require
 ### Directory tree
 <pre>
 [root directory]
-├── figures
+├── code
+|   ├── IPoC_Init
+|   ├── IPoC_Linearize
+|   ├── IPoC_Solve
+|   ├── IPoC_main
+    ...
+|   ├── Convergence_main
+    └── Stability_main
 ├── data
-├── execution
-|   ├── Training Mode
-|       └── *Training.ipynb*
-|   └── Inference Mode
-|       ├── *Inference.ipynb*
-|
 ...
 └── requirements.txt
 <!--  Readme.md -->
 </pre>
 
+File | #Purpose
+--- | ---
+**IPoC_Init** | Model initialization
+**IPoC_Linearize** | Linearization process around equilibrium point
+**IPoC_Solve** | Numerical solution (using RK-45)
+:---: | :---:
+**IPoC_main** | Main execution file (startup file)
 
 ## Citation
 
