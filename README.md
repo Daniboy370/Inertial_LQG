@@ -74,10 +74,10 @@ For convenience, both inference and training notebooks are provided, GPU-require
 
 File | Purpose | File | Purpose 
 --- | --- | --- | ---
+**IPoC_main** | IPoC Launcher file | **A_IPoC_main** | A-IPoC Launcher file
 **IPoC_Init** | IPoC model initialization (conventional) | **A-IPoC_Init** | A-IPoC model initialization (ours)
-**IPoC_Linearize** | Linearization process around equilibrium point | **A_IPoC_Linearize** | Linearization of the augmented model around equilibrium point
-**IPoC_Solve** | Numerical solution (using RK-45) | **IPoC_Solve** | Numerical solution (using RK-45)
-**IPoC_main** | Main execution file (startup file) | **IPoC_main** | Main execution file (startup file)
+**IPoC_Linearize** | Regular linearization process | **A_IPoC_Linearize** | Augmented linearization process
+**IPoC_Solve** | Numerical solution (using RK-45) | **A_IPoC_Solve** | Numerical solution (using RK-45)
 
 ## Citation
 
