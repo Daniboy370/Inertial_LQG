@@ -1,5 +1,3 @@
-# Inertial_LQG
-
 &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;  <img src="https://github.com/ansfl/MEMS-IMU-Denoising/blob/main/figrues/Logo.png?raw=true" width="500" />
 
 
@@ -25,29 +23,17 @@ This refinement improves overall control performance, as demonstrated in the fol
  <img src="https://github.com/Daniboy370/Inertial_LQG/blob/main/data/Vid_Pend_1.gif?raw=true" width="950" class='center'/>
 
 
-### Experimental setup & Dataset
+### Simulation Results
 
 To evaluate our hypothesized higher-order system model, we conduct a comprehensive assessment. First, the left figure verifies state solutions under ideal conditions, with a continuous prediction-to-update ratio ($\rho=1$). Then, the right figure examines the same configuration variables and their derivatives under lower ratios ($\rho<1$), where external updates are scarcer and more discontinuous:
 
  &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; 
  <img src="https://github.com/Daniboy370/Inertial_LQG/blob/main/data/Fig_Comp_1.png?raw=true" width="1150" class='center'/>
 
+We analyze the impact of update ratios on observer-controller (KF-LQR) sensitivity. At \(\rho = 0.5\) (top row), small, bounded errors appear, with the rightmost column showing the corresponding control action. This performance stems from the predictive model compensating for uncertainty. At \(\rho = 0.1\) (middle row), greater update discontinuity thickens and adds noise to error patterns, increasing control fluctuations as it struggles to stabilize configuration variables. The response remains stable but less smooth, requiring more control effort. At \(\rho = 0.01\) (bottom row), the controller switches abruptly between saturation boundaries, indicating instability. State estimates diverge, causing drift and insufficient control feedback, ultimately leading to unrecoverable perturbations.
 
-
-
-
-ensure robust generalizability, acquiring data of both quantity and quality is crucial. The figure below illustrates our experimental setup conducted under controlled laboratory conditions, free from external disturbances. The five main components are highlighted in blue parentheses:
-
-1) Control module [MRU-P datasheet](https://www.inertiallabs.com/mru-datasheet): Ensures level conditions and
-   provides GT heading angles ($y$) with a static accuracy of $0.2^\circ$.
-2) Test module @ [Emcore SDC500 datasheet](https://emcore.com/wp-content/uploads/2022/05/966762_B-SDC500.pdf). Positioned at the opposite end of the diameter, our MEMS-IMU provides stationary measurements ($x_0 , ..., x_t$) at an opposing heading angle ($y-180^\circ$), with bias instability specification of 1 $^\circ$ / $\text{hr}$ and ARW of 0.02 $^\circ$ / $\sqrt{\text{hr}}$ .
-3) Rotating plate: Both sensors are positioned on a levelled plate that rotates freely around its azimuth axis, allowing stationary measurements across various heading angles.
-4) Power supply: Ensures a stable and reliable source of energy for uninterrupted system functionality.
-5) Computing unit: Serves as the central processing hub, facilitating efficient operation and ensuring that real-time data is saved, labeled, and appropriately organized.
-
-&nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; 
- <img src="https://github.com/ansfl/Learning-Based-MEMS-Gyrocompassing/blob/main/figures/Fig_Setup.jpg?raw=true" width="550" class='center'/>
-
+ &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; 
+ <img src="https://github.com/Daniboy370/Inertial_LQG/blob/main/data/Fig_Ratio.png?raw=true" width="1100" class='center'/>
 
 ## Code
 
